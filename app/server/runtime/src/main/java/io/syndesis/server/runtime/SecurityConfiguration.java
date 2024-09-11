@@ -67,7 +67,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers(HttpMethod.OPTIONS).permitAll()
             .antMatchers(COMMON_NON_SECURED_PATHS).permitAll()
             .antMatchers(HttpMethod.GET, "/api/v1/credentials/callback").permitAll()
-            .antMatchers("/api/v1/**").hasRole("AUTHENTICATED")
+            // .antMatchers("/api/v1/**").hasRole("AUTHENTICATED")
             .anyRequest().permitAll();
 
         http.csrf()
